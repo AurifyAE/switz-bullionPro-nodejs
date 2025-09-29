@@ -37,8 +37,8 @@ const dummyAdmins = [
   },
   {
     name: "System Administrator",
-    email: "swtiz@bullion.com",
-    password: "swtiz123!",
+    email: "switz@bullion.com",
+    password: "switz123!",
     type: "admin", 
     status: "active",
     isActive: true
