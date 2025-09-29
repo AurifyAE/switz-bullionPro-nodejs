@@ -42,10 +42,7 @@ const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
       "http://localhost:5173",
-      "http://localhost:3000",
-      "http://localhost:8080",
       "https://switz.bullionpro.net",
-      "https://altawasel.bullionpro.net"
     ];
 
     if (!origin || allowedOrigins.includes(origin)) {
