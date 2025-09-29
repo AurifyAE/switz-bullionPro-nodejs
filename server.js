@@ -45,18 +45,18 @@ const corsOptions = {
       "http://localhost:3000",
       "http://localhost:8080",
       "https://bullion-system-react2.onrender.com",
-      "https://altawasel.bullionpro.net"
+      "https://switz.bullionpro.net", // Add your hosted React domain
     ];
 
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(null, true); // Allow all origins for now, change in production
+      callback(new Error("Not allowed by CORS"), false); // Reject unauthorized origins
     }
   },
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "x-secret-key", "Authorization"],
-  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], // Ensure OPTIONS is included
+  allowedHeaders: ["Content-Type", "x-secret-key", "Authorization"], // Match headers sent by frontend
+  credentials: true, // Allow cookies or Authorization headers
   preflightContinue: false,
   optionsSuccessStatus: 204,
 };
