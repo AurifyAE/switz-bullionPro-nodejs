@@ -42,7 +42,10 @@ const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
       "http://localhost:5173",
-      "https://switz.bullionpro.net",
+      "http://localhost:3000",
+      "http://localhost:8080",
+      "https://bullion-system-react2.onrender.com",
+      "https://altawasel.bullionpro.net"
     ];
 
     if (!origin || allowedOrigins.includes(origin)) {
