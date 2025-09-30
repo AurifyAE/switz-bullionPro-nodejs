@@ -10,7 +10,7 @@ import { validateLoginInput } from "../../../middleware/validationMiddleware.js"
 
 const router = express.Router();
 
-router.post("/login", validateLoginInput, login);
+router.post("/login", login);
 router.post("/refresh", refreshToken);
 router.post("/logout", authenticateToken, logout);
 
